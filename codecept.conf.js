@@ -20,8 +20,8 @@ exports.config = {
           {
             host: 'hub-cloud.browserstack.com',
             port: 4444,
-            user: 'samuelleite_GtpoxN',
-            key: 'sYCp8ma8kXSd4DoH6mAY',
+            user: process.env.BS_USER,
+            key: process.env.BS_KEY,
             platform: capabilities.platformName,
             desiredCapabilities: capabilities
           },
