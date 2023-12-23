@@ -45,15 +45,15 @@ module.exports = {
     I.touchPerform([
       {
         action: 'longPress',
-        options: { x: 600, y: 1200 }
+        options: { x: 600, y: 1400 }
       },
       {
         action: 'moveTo',
-        options: { x: 600, y: 350 }
+        options: { x: 600, y: 300 }
       },
       { action: 'release' }
-    ]),
-      I.waitForElement(this.buttons.finish)
+    ])
+    I.waitForElement(this.buttons.finish, 5)
     I.tap(this.buttons.finish)
 
     I.wait(2)

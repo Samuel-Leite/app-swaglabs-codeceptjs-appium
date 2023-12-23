@@ -2,7 +2,7 @@
 Feature('Buy produts via mobile app')
 
 // variable global
-const { loginAppPage, homeAppPage, productAppPage, cartAppPage } = inject()
+const { loginScreen, homeScreen, productScreen, cartScreen } = inject()
 const name = require('../../helpers/utils')
 const code = require('../../helpers/utils')
 
@@ -13,39 +13,39 @@ const lastName = name.getLastName()
 const postalCode = code.getCode()
 
 Before(() => {
-  loginAppPage.loginApp(process.env.USER, process.env.PASSWORD)
-  homeAppPage.checkLoginSuccess()
-  homeAppPage.selectToggle()
+  loginScreen.loginApp(process.env.USER, process.env.PASSWORD)
+  homeScreen.checkLoginSuccess()
+  homeScreen.selectToggle()
 })
 
 After(() => {
-  productAppPage.backMenu()
-  homeAppPage.checkCart()
-  cartAppPage.checkoutProduct()
-  cartAppPage.dataBuyer(firstName, lastName, postalCode)
-  cartAppPage.completePayment()
+  productScreen.backMenu()
+  homeScreen.checkCart()
+  cartScreen.checkoutProduct()
+  cartScreen.dataBuyer(firstName, lastName, postalCode)
+  cartScreen.completePayment()
 })
 
 Scenario('Buy Sauce Labs Backpack with success', () => {
-  productAppPage.addBackpackToCart()
-})
+  productScreen.addBackpackToCart()
+}).tag('wip')
 
 Scenario('Buy Sauce Labs Bike Light with success', () => {
-  productAppPage.addBikeLightToCart()
+  productScreen.addBikeLightToCart()
 })
 
 Scenario('Buy Sauce Labs Bolt T-Shirt with success', () => {
-  productAppPage.addBoltTShirtToCart()
+  productScreen.addBoltTShirtToCart()
 })
 
 Scenario('Buy Sauce Labs Fleece Jacket with success', () => {
-  productAppPage.addFleeceJacketToCart()
+  productScreen.addFleeceJacketToCart()
 })
 
 Scenario('Buy Sauce Labs Onesie with success', () => {
-  productAppPage.addOnesieToCart()
+  productScreen.addOnesieToCart()
 })
 
 Scenario('Buy T-Shirt RED with success', () => {
-  productAppPage.addTShirtREDToCart()
+  productScreen.addTShirtREDToCart()
 })

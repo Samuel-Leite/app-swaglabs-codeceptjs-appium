@@ -9,18 +9,21 @@ exports.config = {
   output: './output',
   helpers: {
     Appium:
-      process.env.MODE === 'mobile'
-        ? // Mobile App
+      process.env.MODE === 'local'
+        ? // Local
           {
             app: path.join(__dirname, '/resources/app', process.env.APP),
             platform: capabilities.platformName,
             capabilities
           }
-        : // Mobile Web
+        : // Remote
           {
-            app: path.join(__dirname, '/resources/app', process.env.APP),
+            host: 'hub-cloud.browserstack.com',
+            port: 4444,
+            user: 'samuelleite_GtpoxN',
+            key: 'sYCp8ma8kXSd4DoH6mAY',
             platform: capabilities.platformName,
-            capabilities
+            desiredCapabilities: capabilities
           },
     Hooks: {
       require: './helpers/hooks.js'
@@ -28,14 +31,10 @@ exports.config = {
   },
   include: {
     I: './helpers/commands.js',
-    loginAppPage: './tests/pages/appAndroid/loginApp_page.js',
-    homeAppPage: './tests/pages/appAndroid/homeApp_page.js',
-    productAppPage: './tests/pages/appAndroid/productApp_page.js',
-    cartAppPage: './tests/pages/appAndroid/cartApp_page.js',
-    loginWebPage: './tests/pages/webAndroid/loginWeb_page.js',
-    homeWebPage: './tests/pages/webAndroid/homeWeb_page.js',
-    productWebPage: './tests/pages/webAndroid/productWeb_page.js',
-    cartWebPage: './tests/pages/webAndroid/cartWeb_page.js'
+    loginScreen: './tests/screens/login_screen.js',
+    homeScreen: './tests/screens/home_screen.js',
+    productScreen: './tests/screens/product_screen.js',
+    cartScreen: './tests/screens/cart_screen.js'
   },
   mocha: {},
   bootstrap: null,

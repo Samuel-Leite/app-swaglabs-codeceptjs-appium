@@ -1,0 +1,16 @@
+{
+    "app": {
+        "platformName": "Android",
+        "deviceName": "pixel",
+        "platformVersion": "9",
+        "appPackage": "com.swaglabsmobileapp",
+        "appActivity": "MainActivity"
+    },
+    "webApp": {
+        "platformName": "Android",
+        "deviceName": "pixel",
+        "platformVersion": "9",
+        "automationName": "UiAutomator2",
+        "browserName": "Chrome"
+    }
+}
