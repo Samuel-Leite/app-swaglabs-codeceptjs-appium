@@ -16,5 +16,23 @@
         "automationName": "UiAutomator2",
         "sessionName": "Swag Labs",
         "projectName": "Buy Products"
+    },
+    "redmi11": {
+        "platformName": "android",
+        "realMobile": "true",
+        "device": "Xiaomi Redmi Note 11",
+        "os_version": "11",
+        "fullReset": "true",
+        "autoGrantPermissions": "true",
+        "app": "bs://a380555f5c7356cefe64f7c79fa1748a62526cee",
+        "browserstack.debug": "true",
+        "browserstack.maskCommands": "setValues",
+        "browserstack.networkLogs": "true",
+        "browserstack.gpsLocation": "-23.622680,-46.700262",
+        "browserstack.appium_version": "1.22.0",
+        "serverUrl": "https://hub.browserstack.com/wd/hub",
+        "automationName": "UiAutomator2",
+        "sessionName": "Swag Labs",
+        "projectName": "Buy Products"
     }
 }

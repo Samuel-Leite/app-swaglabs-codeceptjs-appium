@@ -42,11 +42,8 @@ exports.config = {
   teardown: null,
   hooks: [],
   // gherkin: {
-  //   features: './tests/features/appTest.feature',
-  //   steps: ['./tests/step_definitions/app_steps.js']
-
-  //   features: './tests/features/webTest.feature',
-  //   steps: ['./tests/step_definitions/web_steps.js']
+  //   features: './tests/features/product.feature',
+  //   steps: ['./tests/step_definitions/product_steps.js']
   // },
   plugins: {
     retryFailedStep: {
