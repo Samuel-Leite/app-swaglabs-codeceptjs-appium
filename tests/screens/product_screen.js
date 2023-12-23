@@ -1,7 +1,6 @@
 /* eslint-disable no-sequences */
 /* eslint-disable no-undef */
 const { I } = inject()
-const isAndroidStudio = process.env.MODE === 'local'
 
 module.exports = {
   homeMenu: {
@@ -10,17 +9,7 @@ module.exports = {
   },
 
   addBackpackToCart() {
-    if (isAndroidStudio) {
-      I.touchPerform([
-        {
-          action: 'press',
-          options: { x: 600, y: 440 }
-        },
-        { action: 'release' }
-      ])
-    } else {
-      I.click('Sauce Labs Backpack')
-    }
+    I.selectProductCustom('600', '440')
 
     I.wait(2)
 
@@ -43,14 +32,9 @@ module.exports = {
   },
 
   addBikeLightToCart() {
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 880 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    I.selectProductCustom('600', '880')
+
+    I.wait(2)
 
     I.touchPerform([
       {
@@ -71,14 +55,9 @@ module.exports = {
   },
 
   addBoltTShirtToCart() {
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 1260 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    I.selectProductCustom('600', '1260')
+
+    I.wait(2)
 
     I.touchPerform([
       {
@@ -112,14 +91,9 @@ module.exports = {
     ]),
       I.wait(2)
 
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 500 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    I.selectProductCustom('600', '500')
+
+    I.wait(2)
 
     I.touchPerform([
       {
@@ -153,14 +127,9 @@ module.exports = {
     ]),
       I.wait(2)
 
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 900 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    I.selectProductCustom('600', '900')
+
+    I.wait(2)
 
     I.touchPerform([
       {
@@ -194,14 +163,9 @@ module.exports = {
     ]),
       I.wait(2)
 
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 1290 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    I.selectProductCustom('600', '1290')
+
+    I.wait(2)
 
     I.touchPerform([
       {

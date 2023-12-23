@@ -13,6 +13,8 @@
         "browserstack.gpsLocation": "-23.622680,-46.700262",
         "browserstack.appium_version": "1.22.0",
         "serverUrl": "https://hub.browserstack.com/wd/hub",
-        "automationName": "UiAutomator2"
+        "automationName": "UiAutomator2",
+        "sessionName": "Swag Labs",
+        "projectName": "Buy Products"
     }
 }

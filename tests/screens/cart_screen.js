@@ -50,11 +50,11 @@ module.exports = {
     I.touchPerform([
       {
         action: 'longPress',
-        options: { x: 500, y: 1500 }
+        options: { x: 500, y: 1500, force: true }
       },
       {
         action: 'moveTo',
-        options: { x: 500, y: 200 }
+        options: { x: 500, y: 200, force: true }
       },
       { action: 'release' }
     ])
