@@ -1,10 +1,18 @@
 {
     "galaxyS21": {
-        "platformName": "ANDROID",
+        "platformName": "android",
         "realMobile": "true",
         "device": "Samsung Galaxy S21",
         "os_version": "11",
-        "browserName": "chrome",
+        "fullReset": "true",
+        "autoGrantPermissions": "true",
+        "app": "bs://a380555f5c7356cefe64f7c79fa1748a62526cee",
+        "browserstack.debug": "true",
+        "browserstack.maskCommands": "setValues",
+        "browserstack.networkLogs": "true",
+        "browserstack.gpsLocation": "-23.622680,-46.700262",
+        "browserstack.appium_version": "1.22.0",
+        "serverUrl": "https://hub.browserstack.com/wd/hub",
         "automationName": "UiAutomator2"
     }
 }
