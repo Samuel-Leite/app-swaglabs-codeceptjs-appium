@@ -31,14 +31,10 @@ exports.config = {
   },
   include: {
     I: './helpers/commands.js',
-    loginAppPage: './tests/pages/appAndroid/loginApp_page.js',
-    homeAppPage: './tests/pages/appAndroid/homeApp_page.js',
-    productAppPage: './tests/pages/appAndroid/productApp_page.js',
-    cartAppPage: './tests/pages/appAndroid/cartApp_page.js',
-    loginWebPage: './tests/pages/webAndroid/loginWeb_page.js',
-    homeWebPage: './tests/pages/webAndroid/homeWeb_page.js',
-    productWebPage: './tests/pages/webAndroid/productWeb_page.js',
-    cartWebPage: './tests/pages/webAndroid/cartWeb_page.js'
+    loginScreen: './tests/screens/login_screen.js',
+    homeScreen: './tests/screens/home_screen.js',
+    productScreen: './tests/screens/product_screen.js',
+    cartScreen: './tests/screens/cart_screen.js'
   },
   mocha: {},
   bootstrap: null,

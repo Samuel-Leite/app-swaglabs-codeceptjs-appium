@@ -12,7 +12,7 @@ module.exports = {
   },
 
   loginApp(userName, password) {
-    I.waitForElement(this.fields.userName, 3)
+    I.waitForElement(this.fields.userName, 5)
     I.fillField(this.fields.userName, userName)
     I.fillField(this.fields.password, password)
     I.tap(this.button.enter)
