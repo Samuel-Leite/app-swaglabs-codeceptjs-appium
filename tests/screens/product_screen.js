@@ -1,6 +1,7 @@
 /* eslint-disable no-sequences */
 /* eslint-disable no-undef */
 const { I } = inject()
+const isAndroidStudio = process.env.MODE === 'local'
 
 module.exports = {
   homeMenu: {
@@ -9,14 +10,19 @@ module.exports = {
   },
 
   addBackpackToCart() {
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 600, y: 440 }
-      },
-      { action: 'release' }
-    ]),
-      I.wait(2)
+    if (isAndroidStudio) {
+      I.touchPerform([
+        {
+          action: 'press',
+          options: { x: 600, y: 440 }
+        },
+        { action: 'release' }
+      ])
+    } else {
+      I.click('Sauce Labs Backpack')
+    }
+
+    I.wait(2)
 
     I.touchPerform([
       {

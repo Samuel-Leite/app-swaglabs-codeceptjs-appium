@@ -1,6 +1,7 @@
 /* eslint-disable no-sequences */
 /* eslint-disable no-undef */
 const { I } = inject()
+const isAndroidStudio = process.env.MODE === 'local'
 
 module.exports = {
   buttons: {
@@ -32,24 +33,28 @@ module.exports = {
     I.fillField(this.fields.postalCode, txtPostalCode)
 
     // press continue payment
-    I.touchPerform([
-      {
-        action: 'press',
-        options: { x: 540, y: 1500 }
-      },
-      { action: 'release' }
-    ])
+    if (isAndroidStudio) {
+      I.touchPerform([
+        {
+          action: 'press',
+          options: { x: 540, y: 1500 }
+        },
+        { action: 'release' }
+      ])
+    } else {
+      I.click('CONTINUE')
+    }
   },
 
   completePayment() {
     I.touchPerform([
       {
         action: 'longPress',
-        options: { x: 600, y: 1400 }
+        options: { x: 500, y: 1500 }
       },
       {
         action: 'moveTo',
-        options: { x: 600, y: 300 }
+        options: { x: 500, y: 200 }
       },
       { action: 'release' }
     ])
