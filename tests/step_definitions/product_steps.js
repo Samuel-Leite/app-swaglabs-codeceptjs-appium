@@ -3,6 +3,7 @@
 const { loginScreen, homeScreen, productScreen, cartScreen } = inject()
 const name = require('../../helpers/utils')
 const code = require('../../helpers/utils')
+const credencial = require('../../resources/data/credencial')
 
 require('dotenv').config()
 
@@ -11,7 +12,7 @@ const lastName = name.getLastName()
 const postalCode = code.getCode()
 
 Given('that I am logged into the SwagLabs app', () => {
-  loginScreen.loginApp(process.env.USER, process.env.PASSWORD)
+  loginScreen.loginApp(credencial.user, credencial.password)
   homeScreen.checkLoginSuccess()
 })
 

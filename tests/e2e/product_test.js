@@ -5,6 +5,7 @@ Feature('Buy produts via mobile app')
 const { loginScreen, homeScreen, productScreen, cartScreen } = inject()
 const name = require('../../helpers/utils')
 const code = require('../../helpers/utils')
+const credencial = require('../../resources/data/credencial')
 
 require('dotenv').config()
 
@@ -13,7 +14,7 @@ const lastName = name.getLastName()
 const postalCode = code.getCode()
 
 Before(() => {
-  loginScreen.loginApp(process.env.USER, process.env.PASSWORD)
+  loginScreen.loginApp(credencial.user, credencial.password)
   homeScreen.checkLoginSuccess()
   homeScreen.selectToggle()
 })
