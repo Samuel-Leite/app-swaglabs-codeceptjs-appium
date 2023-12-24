@@ -80,8 +80,12 @@ npm run tag @nome_tag
 
 ## 📷 Vídeo evidenciando a execução no BrowserStack
 
-https://github.com/Samuel-Leite/app-swaglabs-codeceptjs-appium/assets/74505293/a75810fd-eff4-4d2a-a87e-ef5811af91fc
+Segue vídeo evidenciando a execução do cenário de teste através do BrowserStack:
 
+- Dispositivo: Xiaomi Redmi Note 11,
+- Sistema Operacional: Android 11.0
+
+https://github.com/Samuel-Leite/app-swaglabs-codeceptjs-appium/assets/74505293/a75810fd-eff4-4d2a-a87e-ef5811af91fc
 
 ## 🔗 Links para Apoio
 
