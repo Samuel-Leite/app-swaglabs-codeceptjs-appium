@@ -5,60 +5,57 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
 const Helper = require('@codeceptjs/helper')
-const { container, ecorder, event, output, helper } = require('codeceptjs')
+const { container, output, helper } = require('codeceptjs')
+const { execSync } = require('child_process')
 
-const rimraf = require('rimraf')
-
-const utils = require('./utils')
+const utf8 = { encoding: 'utf-8' }
 
 class hooks extends Helper {
   _init() {
     // before all tests
     console.log('*************************************')
-    console.log('******* Variáveis de Ambiente *******')
+    console.log('***** Dados Gerais da Execução ******')
     console.log(`MODE: ${process.env.MODE}`)
     console.log(`CAPS: ${process.env.CAPS}`)
-    console.log(`APP file: ${process.env.APP}`)
-    console.log('*************************************')
+
     try {
-      rimraf.sync('output/')
-      console.log('Diretório "output" excluído com sucesso!')
+      execSync('rd /s /q output', { encoding: 'utf8' })
+      console.log('DIRETORIO: excluído com sucesso!')
     } catch (error) {
       console.error(`Ocorreu um erro ao excluir o diretório: ${error}`)
     }
+
+    console.log('*************************************')
   }
 
   _before(test) {
     // before a test
-    // test.retries(process.env.RETRY)
+    test.retries(process.env.RETRY)
     console.log('--------------------------------Start----------------------------------')
     const allure = codeceptjs.container.plugins('allure')
     allure.addParameter('0', 'Mode', process.env.MODE)
     allure.addParameter('0', 'Device', process.env.CAPS)
   }
 
-  //   _after() {
-  //     console.log('--------------------------------End----------------------------------')
-  //   } // after a test
+  _after() {
+    console.log('--------------------------------End----------------------------------')
+  } // after a test
 
-  //   _beforeStep() {} // before each step
+  _beforeStep() {} // before each step
 
-  //   _afterStep() {
-  //     // after each step
-  //     utils.addEvidenciaApiAllure()
-  //   }
+  _afterStep() {} // after each step
 
-  //   _beforeSuite() {} // before each suite
+  _beforeSuite() {} // before each suite
 
-  //   _afterSuite() {} // after each suite
+  _afterSuite() {} // after each suite
 
-  //   _passed() {} // after a test passed
+  _passed() {} // after a test passed
 
-  //   _failed() {} // after a test failed
+  _failed() {} // after a test failed
 
-  //   _finishTest() {
-  //     // after all tests
-  //     //  execSync('allure serve output', utf8)
-  //   }
+  _finishTest() {
+    // after all tests
+    execSync('allure serve output', utf8)
+  }
 }
 module.exports = hooks
