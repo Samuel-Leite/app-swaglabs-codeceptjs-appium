@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-Feature('Buy produts via mobile app')
+Feature('Buy Produts')
 
 // variable global
 const { loginScreen, homeScreen, productScreen, cartScreen } = inject()
