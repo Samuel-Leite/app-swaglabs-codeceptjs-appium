@@ -78,6 +78,11 @@ npm run tag @nome_tag
 
 - Além de informar as credenciais no arquivo .env para realizar a integração com o BrowserStack, é necessário realizar o upload do APK no BrowserStack e copiar o código gerado e inserir no arquivo './resoluces/conf/\*/caps.json' no campo 'app'.
 
+## 📷 Vídeo evidenciando a execução no BrowserStack
+
+https://github.com/Samuel-Leite/app-swaglabs-codeceptjs-appium/assets/74505293/a75810fd-eff4-4d2a-a87e-ef5811af91fc
+
+
 ## 🔗 Links para Apoio
 
 - [CodeceptJs Appium](https://codecept.io/helpers/Appium.html)
