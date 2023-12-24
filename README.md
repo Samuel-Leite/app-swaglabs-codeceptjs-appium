@@ -1,12 +1,10 @@
-# Automação de teste E2E com aplicação mobile com framework CodeceptJS
+# Automação mobile E2E com framework CodeceptJS
 
 ![Alt text](image.png)
 
 ## 🚀 Introdução:
 
-Através do framework CodeceptJS e Appium, o projeto utilizou a aplicação do Swag Labs incluindo configurações: gherkin, variáveis randômicas, e outras configurações contemplando as boas práticas do mercado.
-
-Faça o donwload do template no repositório de código para utilizar no seu projeto em especifico, feito isso, fique a vontande para usufruir dos recursos disponíveis e também customizar de acordo com sua necessidade.
+Através do framework CodeceptJS + Appium, o projeto utilizou o APK SwagLabs para realizar automação de testes E2E contemplando as configurações: gherkin, variáveis randômicas, husky, allure report e outros visando as boas práticas do mercado.
 
 ## 💻 Tecnologias:
 
@@ -32,10 +30,10 @@ Faça o donwload do template no repositório de código para utilizar no seu pro
 - Informar os dados no arquivo dotEnv com o modelo do dispositivo que será executado e as credenciais do BrowserStack, segue o modelo:
 
 ```
-# Informar se será executado local (Android Studio) ou remote (BrowserStack)
+# Informar se será executado localmente (Android Studio) ou remote (BrowserStack)
 MODE='remote'
 
-# Informar o aparelho que será executado e seus capabilitys ./resoluces/conf/*/caps.json
+# Informar o dispositivo que será executado com o respectivo capabilitys ./resoluces/conf/*/caps.json
 CAPS='galaxyS21'
 
 # Nome do aplicativo a ser executado no Android Studio que está salvo no './resources/app/*.apk'
@@ -50,19 +48,25 @@ BS_KEY='numero_chave'
 
 - Inicializar o emulador do Android Studio ou do BrowserStack
 
-- Executar todos os testes através do comando
+- Executar todos os testes:
 
 ```
 npm run regression
 ```
 
-- Executar o teste através de tag com o comando
+- Executar o teste através de tag:
 
 ```
 npm run tag @nome_tag
 ```
 
-## 📂 Estrututa do projeto
+- Executar o teste através do gherkin:
+
+```
+npm run gherkin
+```
+
+## 📂 Estrututa do projeto:
 
 | Diretório       | Finalidade                                                                             |
 | --------------- | -------------------------------------------------------------------------------------- |
@@ -72,13 +76,12 @@ npm run tag @nome_tag
 | ./resource/conf | Capabilitys dos dispositivos do Android Studio e BrowserStack                          |
 | ./resource/data | Credenciais para logar no aplicativo móvel SauceLabs                                   |
 | ./tests         | Testes e2e, features, screens e Step Definitions concernentes aos testes automatizados |
-| ./.env          | Arquivo com as variáveis                                                               |
 
 ## 💡 Observações:
 
 - Além de informar as credenciais no arquivo .env para realizar a integração com o BrowserStack, é necessário realizar o upload do APK no BrowserStack e copiar o código gerado e inserir no arquivo './resoluces/conf/\*/caps.json' no campo 'app'.
 
-## 📷 Vídeo de execução no BrowserStack
+## 📷 Vídeo de execução no BrowserStack:
 
 Segue vídeo evidenciando a execução do cenário de teste através do BrowserStack:
 
@@ -87,7 +90,7 @@ Segue vídeo evidenciando a execução do cenário de teste através do BrowserS
 
 https://github.com/Samuel-Leite/app-swaglabs-codeceptjs-appium/assets/74505293/a75810fd-eff4-4d2a-a87e-ef5811af91fc
 
-## 🔗 Links para Apoio
+## 🔗 Links para Apoio:
 
 - [CodeceptJs Appium](https://codecept.io/helpers/Appium.html)
 - [Capabilitys do BrowserStack](https://www.browserstack.com/app-automate/capabilities?tag=w3c)
