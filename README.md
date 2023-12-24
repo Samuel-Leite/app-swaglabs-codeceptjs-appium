@@ -1,6 +1,6 @@
 # Automação mobile E2E com framework CodeceptJS
 
-![Alt text](image.png)
+![logo-PhotoRoom png-PhotoRoom](https://github.com/Samuel-Leite/app-swaglabs-codeceptjs-appium/assets/74505293/c107fa6b-e60c-45ae-8d91-c232a8cbe849)
 
 ## 🚀 Introdução:
 
