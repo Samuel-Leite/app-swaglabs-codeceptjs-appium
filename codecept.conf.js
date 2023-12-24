@@ -12,7 +12,10 @@ exports.config = {
       process.env.MODE === 'local'
         ? // Local
           {
-            app: path.join(__dirname, '/resources/app', process.env.APP),
+            app: path.join(
+              __dirname,
+              '/resources/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'
+            ),
             platform: capabilities.platformName,
             capabilities
           }
