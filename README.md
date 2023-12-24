@@ -78,7 +78,7 @@ npm run tag @nome_tag
 
 - Além de informar as credenciais no arquivo .env para realizar a integração com o BrowserStack, é necessário realizar o upload do APK no BrowserStack e copiar o código gerado e inserir no arquivo './resoluces/conf/\*/caps.json' no campo 'app'.
 
-## 📷 Vídeo evidenciando a execução no BrowserStack
+## 📷 Vídeo de execução no BrowserStack
 
 Segue vídeo evidenciando a execução do cenário de teste através do BrowserStack:
 
