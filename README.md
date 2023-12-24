@@ -2,13 +2,13 @@
 
 ![Alt text](image.png)
 
-## 🚀 Introdução
+## 🚀 Introdução:
 
 Através do framework CodeceptJS e Appium, o projeto utilizou a aplicação do Swag Labs incluindo configurações: gherkin, variáveis randômicas, e outras configurações contemplando as boas práticas do mercado.
 
 Faça o donwload do template no repositório de código para utilizar no seu projeto em especifico, feito isso, fique a vontande para usufruir dos recursos disponíveis e também customizar de acordo com sua necessidade.
 
-## 💻 Tecnologias
+## 💻 Tecnologias:
 
 - VS Code
 - Node.js
