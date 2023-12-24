@@ -41,10 +41,10 @@ exports.config = {
   timeout: null,
   teardown: null,
   hooks: [],
-  // gherkin: {
-  //   features: './tests/features/product.feature',
-  //   steps: ['./tests/step_definitions/product_steps.js']
-  // },
+  gherkin: {
+    features: './tests/features/product.feature',
+    steps: ['./tests/step_definitions/product_steps.js']
+  },
   plugins: {
     retryFailedStep: {
       enabled: true

@@ -7,9 +7,9 @@
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
-    "test": "npx codeceptjs run --steps",
-    "regression": "npx codeceptjs run ./tests/e2e/*_test.js && allure serve output",
-    "tag": "npx codeceptjs run ./tests/e2e/*_test.js --grep",
+    "regression": "npx codeceptjs run ./tests/e2e/*_test.js --verbose",
+    "tag": "npx codeceptjs run ./tests/e2e/*_test.js --verbose --grep",
+    "bdd": "npx codeceptjs run --features --verbose",
     "lint": "eslint src --max-warnings=0"
   },
   "lint-staged": {
@@ -17,7 +17,7 @@
       "npx lint --fix"
     ]
   },
-  "author": "",
+  "author": "Samuel Leite",
   "license": "ISC",
   "dependencies": {
     "codeceptjs": "^3.4.1",
