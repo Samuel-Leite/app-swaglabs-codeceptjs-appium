@@ -53,9 +53,9 @@ class hooks extends Helper {
 
   _failed() {} // after a test failed
 
-  _finishTest() {
-    // after all tests
-    execSync('allure serve output', utf8)
-  }
+  // _finishTest() {
+  //   // after all tests
+  //   execSync('allure serve output', utf8)
+  // }
 }
 module.exports = hooks

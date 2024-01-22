@@ -11,53 +11,23 @@ const firstName = name.getFirstName()
 const lastName = name.getLastName()
 const postalCode = code.getCode()
 
-Given('that I am logged into the SwagLabs app', () => {
+Given('que o usuario esteja logado', () => {
   loginScreen.loginApp(credencial.user, credencial.password)
   homeScreen.checkLoginSuccess()
 })
 
-When('I add the Backpack to the cart', () => {
+When('usuario adicionar a mochila ao carrinho de compras', () => {
   homeScreen.selectToggle()
   productScreen.addBackpackToCart()
   productScreen.backMenu()
 })
 
-When('I add the Bike Light to the cart', () => {
-  homeScreen.selectToggle()
-  productScreen.addBikeLightToCart()
-  productScreen.backMenu()
-})
-
-When('I add the Bolt T-Shirt to the cart', () => {
-  homeScreen.selectToggle()
-  productScreen.addBoltTShirtToCart()
-  productScreen.backMenu()
-})
-
-When('I add the Fleece Jacket to the cart', () => {
-  homeScreen.selectToggle()
-  productScreen.addFleeceJacketToCart()
-  productScreen.backMenu()
-})
-
-When('I add the Onesie to the cart', () => {
-  homeScreen.selectToggle()
-  productScreen.addOnesieToCart()
-  productScreen.backMenu()
-})
-
-When('I add the T-Shirt RED to the cart', () => {
-  homeScreen.selectToggle()
-  productScreen.addTShirtREDToCart()
-  productScreen.backMenu()
-})
-
-When('fill in all payment details', () => {
+When('efetuar a compra do produto', () => {
   homeScreen.checkCart()
   cartScreen.checkoutProduct()
   cartScreen.dataBuyer(firstName, lastName, postalCode)
 })
 
-Then('the payment is completed successfully.', () => {
+Then('pagamento do produto sera efetuada com sucesso', () => {
   cartScreen.completePayment()
 })

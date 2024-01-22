@@ -66,6 +66,8 @@ npm run tag @nome_tag
 npm run gherkin
 ```
 
+Observação: é necessário que esteja configurado o ANDROID_HOME nas variáveis de ambiente da sua máquina.
+
 ## 📂 Estrututa do projeto:
 
 | Diretório       | Finalidade                                                                             |
