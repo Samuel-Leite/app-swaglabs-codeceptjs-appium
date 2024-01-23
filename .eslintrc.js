@@ -22,6 +22,7 @@ module.exports = {
     'import/extensions': 'off',
     'default-param-last': 'off',
     'func-names': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
   }
 }

@@ -23,6 +23,7 @@
     "codeceptjs": "^3.4.1",
     "dotenv": "^16.3.1",
     "eslint-config-airbnb-base": "^15.0.0",
+    "js-yaml": "^4.1.0",
     "node-random-name": "^1.0.1",
     "prettier": "^2.8.7",
     "random-number": "^0.0.9",

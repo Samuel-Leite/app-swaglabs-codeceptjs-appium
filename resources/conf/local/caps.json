@@ -1,9 +1,0 @@
-{
-    "app": {
-        "platformName": "Android",
-        "deviceName": "pixel",
-        "platformVersion": "9",
-        "appPackage": "com.swaglabsmobileapp",
-        "appActivity": "MainActivity"
-    }
-}

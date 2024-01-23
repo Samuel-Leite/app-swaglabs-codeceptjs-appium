@@ -1,0 +1,13 @@
+mobile:
+  platformName: "Android"
+  deviceName: "pixel"
+  platformVersion: "9"
+  appPackage: "com.swaglabsmobileapp"
+  appActivity: "MainActivity"
+
+tablet:
+  platformName: "Android"
+  deviceName: "tabletPixel"
+  platformVersion: "9"
+  appPackage: "com.swaglabsmobileapp"
+  appActivity: "MainActivity"
