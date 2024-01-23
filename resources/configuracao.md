@@ -49,6 +49,10 @@ npm install random-number
 
 appium --allow-insecure chromedriver_autodownload
 
+## Instalação do arquivo YAML
+
+npm install --save js-yaml
+
 ## Relatorio Allure
 
 npm install @codeceptjs/allure-legacy --save-dev
