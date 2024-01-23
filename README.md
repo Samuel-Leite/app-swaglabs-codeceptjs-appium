@@ -30,7 +30,7 @@ Através do framework CodeceptJS + Appium, o projeto utilizou o APK SwagLabs par
 - Informar os dados no arquivo dotEnv com o modelo do dispositivo que será executado e as credenciais do BrowserStack, segue o modelo:
 
 ```
-# Informar se será executado localmente (Android Studio) ou remote (BrowserStack)
+# Informar se será executado local (Android Studio) ou remote (BrowserStack)
 MODE='remote'
 
 # Informar o dispositivo que será executado com o respectivo capabilitys ./resoluces/conf/*/caps.json

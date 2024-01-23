@@ -36,4 +36,4 @@ After(() => {
 
 Scenario('Buy Sauce Labs Backpack with success', () => {
   productScreen.addBackpackToCart()
-})
+}).tag('wip')
