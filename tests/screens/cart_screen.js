@@ -4,33 +4,25 @@ const { I } = inject()
 const isAndroidStudio = process.env.MODE === 'local'
 
 module.exports = {
-  buttons: {
-    removeProduct: '~test-REMOVE',
-    continueShopping: '~test-CONTINUE SHOPPING',
-    checkout: '~test-CHECKOUT',
-    cancel: 'test-CANCEL',
-    finish: '~test-FINISH'
-  },
-
-  fields: {
-    firstName: '~test-First Name',
-    lastName: '~test-Last Name',
-    postalCode: '~test-Zip/Postal Code'
-  },
-
-  message: {
-    paymentSuccess: '~test-CHECKOUT: COMPLETE!'
+  locs: {
+    btnContinue: 'CONTINUE',
+    btnCheckout: '~test-CHECKOUT',
+    btnFinish: '~test-FINISH',
+    txtFirstName: '~test-First Name',
+    txtLastName: '~test-Last Name',
+    txtPostalCode: '~test-Zip/Postal Code',
+    lblPaymentSuccess: '~test-CHECKOUT: COMPLETE!'
   },
 
   checkoutProduct() {
-    I.tap(this.buttons.checkout)
+    I.tap(this.locs.btnCheckout)
     I.wait(3)
   },
 
-  dataBuyer(txtFirstName, txtLastName, txtPostalCode) {
-    I.fillField(this.fields.firstName, txtFirstName)
-    I.fillField(this.fields.lastName, txtLastName)
-    I.fillField(this.fields.postalCode, txtPostalCode)
+  dataBuyer(firstName, lastName, postalCode) {
+    I.fillField(this.locs.txtFirstName, firstName)
+    I.fillField(this.locs.txtLastName, lastName)
+    I.fillField(this.locs.txtPostalCode, postalCode)
 
     // press continue payment
     if (isAndroidStudio) {
@@ -42,7 +34,7 @@ module.exports = {
         { action: 'release' }
       ])
     } else {
-      I.click('CONTINUE')
+      I.click(this.locs.btnContinue)
     }
   },
 
@@ -58,12 +50,12 @@ module.exports = {
       },
       { action: 'release' }
     ])
-    I.waitForElement(this.buttons.finish, 5)
-    I.tap(this.buttons.finish)
+    I.waitForElement(this.locs.btnFinish, 5)
+    I.tap(this.locs.btnFinish)
 
     I.wait(2)
 
-    I.waitForElement(this.message.paymentSuccess)
-    I.seeElement(this.message.paymentSuccess)
+    I.waitForElement(this.locs.lblPaymentSuccess)
+    I.seeElement(this.locs.lblPaymentSuccess)
   }
 }

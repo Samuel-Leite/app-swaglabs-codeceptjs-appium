@@ -2,27 +2,16 @@
 const { I } = inject()
 
 module.exports = {
-  fields: {
-    userName: '~test-Username',
-    password: '~test-Password'
+  locs: {
+    txtUserName: '~test-Username',
+    txtPassword: '~test-Password',
+    btnEnter: '~test-LOGIN'
   },
 
-  button: {
-    enter: '~test-LOGIN'
-  },
-
-  loginApp(userName, password) {
-    I.waitForElement(this.fields.userName, 5)
-    I.fillField(this.fields.userName, userName)
-    I.fillField(this.fields.password, password)
-    I.tap(this.button.enter)
-  },
-
-  fieldUserName() {
-    try {
-      ;('~test-Username')
-    } catch {
-      ;('//input[@id = "user-name"]')
-    }
+  loginApp(user, pass) {
+    I.waitForElement(this.locs.txtUserName, 5)
+    I.fillField(this.locs.txtUserName, user)
+    I.fillField(this.locs.txtPassword, pass)
+    I.tap(this.locs.btnEnter)
   }
 }

@@ -3,9 +3,9 @@
 const { I } = inject()
 
 module.exports = {
-  homeMenu: {
-    addCart: '~test-ADD TO CART',
-    pageBack: '~test-BACK TO PRODUCTS'
+  locs: {
+    btnAddCart: '~test-ADD TO CART',
+    btnPageBack: '~test-BACK TO PRODUCTS'
   },
 
   addBackpackToCart() {
@@ -26,13 +26,13 @@ module.exports = {
     ]),
       I.wait(2)
 
-    I.tap(this.homeMenu.addCart)
+    I.tap(this.locs.btnAddCart)
 
     I.wait(2)
   },
 
   backMenu() {
-    I.tap('~test-BACK TO PRODUCTS')
+    I.tap(this.locs.btnPageBack)
     I.wait(2)
   }
 }

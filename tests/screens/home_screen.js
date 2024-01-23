@@ -2,25 +2,25 @@
 const { I } = inject()
 
 module.exports = {
-  homeMenu: {
-    menu: '~test-Menu',
-    toggle: '~test-Toggle',
-    addCart: '~test-ADD TO CART',
-    cart: '~test-Cart'
+  locs: {
+    btnMenu: '~test-Menu',
+    btnToggle: '~test-Toggle',
+    btnAddCart: '~test-ADD TO CART',
+    btnCart: '~test-Cart'
   },
 
   checkLoginSuccess() {
-    I.waitForElement(this.homeMenu.menu, 5)
-    I.seeElement(this.homeMenu.menu)
+    I.waitForElement(this.locs.btnMenu, 5)
+    I.seeElement(this.locs.btnMenu)
   },
 
   selectToggle() {
-    I.tap(this.homeMenu.toggle)
+    I.tap(this.locs.btnToggle)
     I.wait(3)
   },
 
   checkCart() {
-    I.tap(this.homeMenu.cart)
+    I.tap(this.locs.btnCart)
     I.wait(2)
   }
 }
