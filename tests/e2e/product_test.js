@@ -1,11 +1,18 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-undef */
 Feature('Buy Produts')
 
-// variable global
+const fs = require('fs')
+const path = require('path') // Importe o módulo 'path'
+const yaml = require('js-yaml')
+
 const { loginScreen, homeScreen, productScreen, cartScreen } = inject()
 const name = require('../../helpers/utils')
 const code = require('../../helpers/utils')
-const credencial = require('../../resources/data/credencial')
+
+// Carrega as credenciais do arquivo YAML
+const credencialPath = path.resolve(__dirname, '../../resources/data/credencial.yml')
+const credencial = yaml.load(fs.readFileSync(credencialPath, 'utf8'))
 
 require('dotenv').config()
 
@@ -29,4 +36,4 @@ After(() => {
 
 Scenario('Buy Sauce Labs Backpack with success', () => {
   productScreen.addBackpackToCart()
-}).tag('wip')
+})
